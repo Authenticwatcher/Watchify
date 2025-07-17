@@ -1,0 +1,197 @@
+/* Folder Structure (for GitHub Pages deployment):
+
+watch-store/
+├── index.html
+├── category.html
+├── watch.html
+├── styles.css
+└── assets/
+    ├── rolex.jpg
+    ├── patek.jpg
+    ├── ap.jpg
+    ├── rolex1.jpg
+    ├── patek1.jpg
+    ├── ap1.jpg
+    └── ...
+*/
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Watch Brands</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Explore Luxury Watch Brands</h1>
+  </header>
+  <main class="grid">
+    <a href="category.html?brand=rolex" class="card">
+      <img src="assets/rolex.jpg" alt="Rolex">
+      <h2>Rolex</h2>
+    </a>
+    <a href="category.html?brand=patek" class="card">
+      <img src="assets/patek.jpg" alt="Patek Philippe">
+      <h2>Patek Philippe</h2>
+    </a>
+    <a href="category.html?brand=ap" class="card">
+      <img src="assets/ap.jpg" alt="Audemars Piguet">
+      <h2>Audemars Piguet</h2>
+    </a>
+  </main>
+</body>
+</html>
+
+<!-- category.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Collection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">&larr; Back to Brands</a>
+    <h1 id="category-title"></h1>
+  </header>
+  <main id="watch-list" class="grid"></main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const brand = params.get('brand');
+    const categories = {
+      rolex: {
+        name: 'Rolex Watches',
+        watches: [
+          { id: 'rolex1', img: 'assets/rolex1.jpg', price: '$12,000' },
+          { id: 'rolex2', img: 'assets/rolex2.jpg', price: '$15,000' }
+        ]
+      },
+      patek: {
+        name: 'Patek Philippe Watches',
+        watches: [
+          { id: 'patek1', img: 'assets/patek1.jpg', price: '$35,000' },
+          { id: 'patek2', img: 'assets/patek2.jpg', price: '$42,000' }
+        ]
+      },
+      ap: {
+        name: 'Audemars Piguet Watches',
+        watches: [
+          { id: 'ap1', img: 'assets/ap1.jpg', price: '$28,000' },
+          { id: 'ap2', img: 'assets/ap2.jpg', price: '$31,000' }
+        ]
+      }
+    };
+
+    const category = categories[brand];
+    document.getElementById('category-title').textContent = category ? category.name : 'Category Not Found';
+    const container = document.getElementById('watch-list');
+    if (category) {
+      category.watches.forEach(watch => {
+        container.innerHTML += `
+          <a href="watch.html?id=${watch.id}" class="card">
+            <img src="${watch.img}" alt="${watch.id}">
+            <h2>${watch.price}</h2>
+          </a>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!-- watch.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">&larr; Back to Brands</a>
+    <h1>Watch Details</h1>
+  </header>
+  <main id="watch-detail"></main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const watchDetails = {
+      'rolex1': { img: 'assets/rolex1.jpg', price: '$12,000', desc: 'Rolex Submariner - classic design, high durability, automatic movement.' },
+      'rolex2': { img: 'assets/rolex2.jpg', price: '$15,000', desc: 'Rolex Daytona - chronograph feature, oystersteel, high resale value.' },
+      'patek1': { img: 'assets/patek1.jpg', price: '$35,000', desc: 'Patek Nautilus - rare collector piece, blue dial, luxury steel.' },
+      'patek2': { img: 'assets/patek2.jpg', price: '$42,000', desc: 'Patek Calatrava - elegant and timeless, gold casing, leather strap.' },
+      'ap1': { img: 'assets/ap1.jpg', price: '$28,000', desc: 'Royal Oak - iconic octagonal bezel, brushed steel, visible screws.' },
+      'ap2': { img: 'assets/ap2.jpg', price: '$31,000', desc: 'AP Offshore - sporty design, rugged build, rubber strap.' }
+    };
+
+    const watch = watchDetails[id];
+    document.getElementById('watch-detail').innerHTML = watch ? `
+      <img src="${watch.img}" alt="${id}" class="detail-img">
+      <h2>${watch.price}</h2>
+      <p>${watch.desc}</p>
+    ` : 'Watch not found.';
+  </script>
+</body>
+</html>
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #000;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-img {
+  max-width: 90%;
+  display: block;
+  margin: 2rem auto;
+}
+
+main p {
+  padding: 0 1rem;
+  text-align: center;
+}
