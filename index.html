@@ -50,11 +50,31 @@
       max-width: 960px;
       margin: auto;
       padding: 2rem;
+      position: relative;
+      z-index: 2;
     }
 
     .container p {
       font-size: 1.1rem;
       line-height: 1.6;
+    }
+
+    .background-image {
+      background-image: url('watch-gears.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .welcome-section {
+      position: relative;
+      overflow: hidden;
     }
 
     footer {
@@ -67,7 +87,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Watchify Logo" />
+    <img src="logo.jpg" alt="Watchify Logo" />
     <h1>WATCHIFY</h1>
     <p><em>AUTHENTIC WATCHES REMADE</em></p>
     <nav>
@@ -77,20 +97,23 @@
     </nav>
   </header>
 
-  <section class="container">
-    <h2>Welcome</h2>
-    <p>
-   Our timepieces are not mass-produced, they are expertly rebuilt using genuine factory components. Each watch is crafted with meticulous attention to detail, offering a true 1:1 representation of authentic luxury without compromise. Explore our catalog to discover unique pieces, and feel free to contact us with any inquiries or for delivery arrangements.
-    </p>
-    <p>
-      Each piece we offer is thoughtfully curated, expertly rebuilt, and rigorously tested to reflect the essence of timeless craftsmanship. Our mission is to deliver more than just watches, we provide elegance, heritage, and uncompromising quality.
-    </p>
-    <p>
-      Whether you're a first-time buyer or a seasoned collector, Watchify is your trusted destination for authentic, precision-crafted rebuilds. We’re committed to offering more than just timepieces, we craft enduring legacies.
-    </p>
-    <p>
-      Take your time exploring our catalog and don’t hesitate to reach out. Our watches may tell time, but they also tell a story.
-    </p>
+  <section class="welcome-section">
+    <div class="background-image"></div>
+    <div class="container">
+      <h2>Welcome</h2>
+      <p>
+        Our timepieces are not mass-produced, they are expertly rebuilt using genuine factory components. Each watch is crafted with meticulous attention to detail, offering a true 1:1 representation of authentic luxury without compromise. Explore our catalog to discover unique pieces, and feel free to contact us with any inquiries or for delivery arrangements.
+      </p>
+      <p>
+        Each piece we offer is thoughtfully curated, expertly rebuilt, and rigorously tested to reflect the essence of timeless craftsmanship. Our mission is to deliver more than just watches, we provide elegance, heritage, and uncompromising quality.
+      </p>
+      <p>
+       Whether you're a first-time buyer or a seasoned collector, Watchify is your trusted destination for authentic, precision-crafted rebuilds. We’re committed to offering more than just timepieces, we craft enduring legacies.
+      </p>
+      <p>
+        Take your time exploring our catalog and don’t hesitate to reach out. Our watches may tell time, but they also tell a story.
+      </p>
+    </div>
   </section>
 
   <footer>
