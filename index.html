@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Watchify - Authentic Watches Remade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
       --yellow-light: #ffee9d;
@@ -18,9 +19,13 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       background-color: white;
       color: #222;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
     }
 
     header {
@@ -51,48 +56,10 @@
       padding: 2rem;
     }
 
-    .watch-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .watch-item {
-      border: 1px solid #eee;
-      border-radius: 8px;
-      overflow: hidden;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .watch-item img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    form {
-      margin-top: 1.5rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      background-color: var(--accent-red);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: var(--red-dark);
+    .fluff {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -105,6 +72,7 @@
 </head>
 <body>
   <header>
+    <!-- Replace this path with your actual logo file name or URL -->
     <img src="logo.png" alt="Watchify Logo" />
     <h1>WATCHIFY</h1>
     <p><em>AUTHENTIC WATCHES REMADE</em></p>
@@ -123,6 +91,17 @@
       without compromise. Browse our catalog for unique timepieces and reach out
       for inquiries or delivery.
     </p>
+    <div class="fluff">
+      <p>
+        Every piece we offer is carefully selected, rebuilt, and tested to embody the spirit of timeless craftsmanship. Our mission is to deliver elegance, heritage, and quality — not just watches.
+      </p>
+      <p>
+        Whether you’re a first-time buyer or a seasoned collector, Watchify is your trusted source for authentic rebuilds. We believe in creating more than just products — we create legacy.
+      </p>
+      <p>
+        Take your time exploring our catalog and don’t hesitate to reach out. Our watches may tell time, but they also tell a story.
+      </p>
+    </div>
   </section>
 
   <footer>
