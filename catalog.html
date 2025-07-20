@@ -35,22 +35,21 @@
     }
 
     .catalog {
-      max-width: 960px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
     }
 
     .watch-item {
-      width: 30%;
-      margin-bottom: 2rem;
       text-align: center;
     }
 
     .watch-item img {
-      width: 200px;
+      width: 100%;
+      max-width: 200px;
       height: auto;
       border-radius: 4px;
     }
@@ -75,18 +74,6 @@
       padding: 1rem;
       text-align: center;
     }
-
-    @media (max-width: 768px) {
-      .watch-item {
-        width: 48%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .watch-item {
-        width: 100%;
-      }
-    }
   </style>
   <script>
     function toggleDescription(id) {
@@ -106,8 +93,22 @@
   </header>
 
   <section class="catalog">
-<!-- Watch items go here -->
-{{WATCH_ITEMS}}
+    <div class="watch-item">
+      <img src="watch1.jpg" alt="Tag Heuer Aquaracer">
+      <div class="watch-name" onclick="toggleDescription('desc1')">Tag Heuer Aquaracer</div>
+      <div id="desc1" class="description">Swiss-made, this bold TAG Heuer Aquaracer is an aesthetic 43 mm watch. This model features a Steel case and a Calibre 16 Automatic movement.</div>
+    </div>
+    <div class="watch-item">
+      <img src="watch2.jpg" alt="Tag Heuer Carrera Calibre 16">
+      <div class="watch-name" onclick="toggleDescription('desc2')">Tag Heuer Carrera Calibre 16</div>
+      <div id="desc2" class="description">The Tag Heuer Carrera Calibre 16 (CV2011) features a 41mm steel case paired with a black aluminum tachymeter bezel. Its silver dial is adorned with metallic hands and hour markers with luminous components for enhanced low-light legibility, along with a date window at 3 o’clock and three chronograph subdials at 6, 9, and 12 o’clock. Completing its design is a sturdy steel bracelet secured by a fold clasp.</div>
+    </div>
+    <div class="watch-item">
+      <img src="watch3.jpg" alt="Tag Heuer Aquaracer">
+      <div class="watch-name" onclick="toggleDescription('desc3')">Tag Heuer Aquaracer</div>
+      <div id="desc3" class="description">Swiss-made, this bold TAG Heuer Aquaracer is an aesthetic 43 mm watch. This model features a Steel case and a Calibre 16 Automatic movement.</div>
+    </div>
+    <!-- Add more watch items below this line using the same structure -->
   </section>
 
   <footer>
