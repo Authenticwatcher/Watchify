@@ -3,35 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Watchify - Authentic Watches Remade</title>
+  <title>Watchify Catalog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --yellow-light: #ffee9d;
-      --yellow: #ffe066;
-      --yellow-dark: #ffd324;
-      --red-light: #ff7f7f;
-      --red: #ff4d4d;
-      --red-dark: #ff0000;
-      --accent-yellow: var(--yellow);
-      --accent-red: var(--red);
-    }
-
     body {
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
+      background-color: #fff;
       color: #222;
     }
 
     header {
-      background-color: var(--accent-yellow);
+      background-color: #ffe066;
       padding: 1rem;
       text-align: center;
     }
 
     header img {
-      height: 60px;
-      vertical-align: middle;
+      height: 100px;
     }
 
     nav a {
@@ -42,90 +31,111 @@
     }
 
     nav a:hover {
-      color: var(--accent-red);
+      color: #ff4d4d;
     }
 
-    .container {
+    .catalog {
       max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    .watch-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
     .watch-item {
-      border: 1px solid #eee;
-      border-radius: 8px;
-      overflow: hidden;
-      padding: 1rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .watch-item img {
-      max-width: 100%;
+      width: 180px;
       height: auto;
-    }
-
-    form {
-      margin-top: 1.5rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
       border-radius: 4px;
     }
 
-    button {
-      background-color: var(--accent-red);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: var(--red-dark);
+    .watch-info h3 {
+      margin: 0 0 0.5rem 0;
     }
 
     footer {
-      background-color: var(--accent-yellow);
+      background-color: #ffe066;
       padding: 1rem;
       text-align: center;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-    <header>
-    <img src="logo.jpg" alt="Watchify Logo" style="height: 100px;" />
+  <header>
+    <img src="logo.jpg" alt="Watchify Logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="catalog.html">Catalog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-      <a href="index.html">Home</a>
-      <a href="catalog.html">Catalog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="container">
-    <h2>Watch Catalog</h2>
-    <div class="watch-grid">
-      <div class="watch-item">
-        <img src="https://via.placeholder.com/200" alt="Sample Watch" />
-        <h3>Watch Name</h3>
-        <p>$Price</p>
-        <p><a href="#">View Details</a></p>
+  <section class="catalog">
+    <div class="watch-item">
+      <img src="watch1.png" alt="Tag Heuer Aquaracer">
+      <div class="watch-info">
+        <h3>Tag Heuer Aquaracer</h3>
+        <p>Swiss-made, this bold TAG Heuer Aquaracer is an aesthetic 43 mm watch. This model features a Steel case and a Calibre 16 Automatic movement.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch2.png" alt="Tag Heuer Carrera Calibre 16">
+      <div class="watch-info">
+        <h3>Tag Heuer Carrera Calibre 16</h3>
+        <p>The Tag Heuer Carrera Calibre 16 (CV2011) features a 41mm steel case paired with a black aluminum tachymeter bezel. Its silver dial is adorned with metallic hands and hour markers with luminous components for enhanced low-light legibility, along with a date window at 3 o’clock and three chronograph subdials at 6, 9, and 12 o’clock. Completing its design is a sturdy steel bracelet secured by a fold clasp.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch3.png" alt="Tag Heuer Aquaracer">
+      <div class="watch-info">
+        <h3>Tag Heuer Aquaracer</h3>
+        <p>Swiss-made, this bold TAG Heuer Aquaracer is an aesthetic 43 mm watch. This model features a Steel case and a Calibre 16 Automatic movement.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch4.png" alt="Tag Hueur Connected Calibre E4">
+      <div class="watch-info">
+        <h3>Tag Hueur Connected Calibre E4</h3>
+        <p>Experience the seamless fusion of style and technology with the Tag Heuer Connected Calibre E4 SBG8A11.BA0646 smartwatch. This sleek timepiece features a stunning touchscreen digital display housed in a durable stainless steel case with a striking blue ceramic bezel. The steel bracelet with a folding clasp ensures a secure and comfortable fit on your wrist. Equipped with advanced features like a heart rate sensor, compass, accelerometer, gyroscope, microphone, and rechargeable quartz movement, this smartwatch is designed to enhance your daily life. Stay connected and stylish with the Tag Heuer Connected Calibre E4 SBG8A11.BA0646.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch5.png" alt="Tag Heuer Carrera Calibre 16 Chrono">
+      <div class="watch-info">
+        <h3>Tag Heuer Carrera Calibre 16 Chrono</h3>
+        <p>High functionality and masculine styling make this Calibre 16 Automatic Chronograph a necessity for all lovers of motor racing. A stylish day and date function is positioned at 3 o'clock. A high-tech Calibre 16 automatic movement powers the chronograph functions like central seconds, plus minutes and hours. An open flange design with red accents and large numerals allow for easy readability. The sapphire crystal fitted into the caseback reveals the movement in action.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch6.png" alt="TAG Heuer Carrera Chronograph">
+      <div class="watch-info">
+        <h3>TAG Heuer Carrera Chronograph</h3>
+        <p>The signature design of the TAG Heuer Carrera shines through in this revamped classic. Numerous sporty upgrades and ergonomic improvements to the case and dial honor the strength of character of this iconic chronograph.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch7.png" alt="Tag Hueur Connected Calibre E4">
+      <div class="watch-info">
+        <h3>Tag Hueur Connected Calibre E4</h3>
+        <p>Experience the seamless fusion of style and technology with the Tag Heuer Connected Calibre E4 SBG8A11.BA0646 smartwatch. This sleek timepiece features a stunning touchscreen digital display housed in a durable stainless steel case with a striking blue ceramic bezel. The steel bracelet with a folding clasp ensures a secure and comfortable fit on your wrist. Equipped with advanced features like a heart rate sensor, compass, accelerometer, gyroscope, microphone, and rechargeable quartz movement, this smartwatch is designed to enhance your daily life. Stay connected and stylish with the Tag Heuer Connected Calibre E4 SBG8A11.BA0646.</p>
+      </div>
+    </div>
+
+    <div class="watch-item">
+      <img src="watch8.png" alt="Tag Heuer Aquaracer">
+      <div class="watch-info">
+        <h3>Tag Heuer Aquaracer</h3>
+        <p>Swiss-made, this bold TAG Heuer Aquaracer is an aesthetic 43 mm watch. This model features a Steel case and a Calibre 16 Automatic movement.</p>
       </div>
     </div>
   </section>
